@@ -52,15 +52,15 @@ def main():
             print(coin["baseAsset"])
 
 
-# def run_script():
-#     main() 
+def run_script():
+    main() 
 
-# def schedule_job():
-#     schedule.every(5).minutes.do(run_script)
+def schedule_job():
+    schedule.every(15).minutes.do(run_script)
     
-#     while True:
-#         schedule.run_pending()
-#         time.sleep(1)
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
 
 if __name__ == "__main__":
-    main()
+    schedule_job()
